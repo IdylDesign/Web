@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>KK Design & Renovation</title>
+    <style>
+        :root{
+            --max-width: 1000px;
+            --accent:#2b2b2b;
+            --muted:#555;
+            --gap:1.1rem;
+            --content-padding:2rem;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+
+        /* Hero image occupies top half (50vh) */
+        .hero{
+            height:50vh;
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            display:block;
+        }
+
+        /* Main content area */
+        .container{
+            max-width:var(--max-width);
+            margin:0 auto;
+            padding:var(--content-padding);
+            color:var(--accent);
+            line-height:1.6;
+        }
+
+        h1{
+            margin:0 0 0.5rem 0;
+            font-size:clamp(1.4rem, 2.6vw, 2rem);
+            letter-spacing:0.3px;
+        }
+
+        .section{
+            margin-bottom:1.25rem;
+        }
+
+        .section-title{
+            font-weight:700;
+            margin-bottom:0.35rem;
+        }
+
+        ul{
+            margin:0.25rem 0 0.5rem 1.1rem;
+        }
+
+        li{
+            margin-bottom:0.5rem;
+            color:var(--muted);
+        }
+
+        /* Small screens: reduce hero height for comfort */
+        @media (max-width:600px){
+            .hero{ height:40vh; }
+            .container{ padding:1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Replace the URL in the style attribute with your banner image -->
+<div class="hero" style="background-image:url('\a stylish home inter.png');" role="img" aria-label="Interior design banner"></div>
+
+<main class="container">
+    <h1>Interior design</h1>
+
+    <section class="section">
+        <div class="section-title">Interior design</div>
+        <ul>
+            <li>Extensive experience with design and remodel of home interiors. We offer full service home interior design, and home renovation services.</li>
+            <li>We work with clients on a one on one basis to manage the design and build process from start to finish. Services include design consultation, planning, construction permits and procurement.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <div class="section-title">Building Permits</div>
+        <ul>
+            <li>Survey of existing structure.</li>
+            <li>Production of CAD drawings required by building department to obtain building permit.</li>
+            <li>Referral/coordination with structural engineer.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <div class="section-title">Landscaping design</div>
+        <ul>
+            <li>At KK clients are the core of what we do. Each project is uniquely customized to the needs of the client and the experience is based on our deeply personal process.</li>
+            <li>From a full landscaping transformation to a small upgrade, no project is too small for us.</li>
+        </ul>
+    </section>
+</main>
+
+</body>
+</html>
