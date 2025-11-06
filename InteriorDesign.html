@@ -12,20 +12,20 @@
     }
     html,body{height:100%}
     body{
-      margin:0; background:linear-gradient(180deg,#fbfbfb 0%,#f7f8f9 100%); color:#222;
+      margin:8px; background:linear-gradient(180deg,#fbfbfb 0%,#f7f8f9 100%); color:#222;
       -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
       line-height:1.5;
     }
-    .wrap{max-width:var(--max-width);margin:40px auto;padding:28px;}
+   /* .wrap{max-width:var(--max-width);margin:40px auto;padding:28px;}
     header{display:flex;align-items:center;gap:18px;margin-bottom:22px;}
     .logo{
       /* replaced background and sizing only */
-      width:192px;
+    /*  width:192px;
       height:64px;
       padding:28px;
       border-radius:10px;
       background:#ffffff; /* changed to white per request */
-      display:flex;
+    /*  display:flex;
       align-items:center;
       justify-content:center;
       color:#fff;
@@ -33,15 +33,15 @@
       font-size:18px;
       box-shadow:0 6px 18px rgba(15,30,40,0.08);
       letter-spacing:0.4px;
-      overflow:hidden;
-    }
+      overflow:hidden; 
+    } */
     .logo a{display:block;height:100%;width:100%}
     .logo img{
       height:64px; width:192px; object-fit:contain; display:block;
       border-radius:6px;
     }
-    h1{font-size:clamp(22px,2.8vw,30px);margin:0 0 4px}
-    p.lead{margin:0;color:var(--muted);font-size:15px}
+    h1{font-size:clamp(22px,2.8vw,30px);margin:0 15px 4px}
+    p.lead{margin:5px 15px;color:var(--muted);font-size:15px}
     main{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:22px;}
     @media(max-width:900px){main{grid-template-columns:1fr;padding:0} .sidebar{order:2}}
     .card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 6px 20px rgba(15,30,40,0.06)}
@@ -62,16 +62,45 @@
       .logo{width:260px;height:28px}
       .logo img{width:260px;height:92px}
     }
+  
+  /* container keeps the logo centered and gives an optional page-like margin */
+  .logo-wrap{
+    max-width: 8.5in;        /* letter width */
+    margin: 1rem auto;       /* center and give breathing room */
+    height: auto;            /* preserve aspect ratio */
+    padding: 0 1rem;         /* optional side padding on small screens */
+   /* max-height: 5.2in;			/* limits logo height on large screens (adjust as needed) */
+  }
+
+  /* responsive logo */
+  .logo{
+    display: block;
+    width: 100%;             /* fill the container up to max-width */
+    max-width: 8.5in;        /* ensure it never grows beyond letter width */
+    height: auto;            /* preserve aspect ratio */
+    object-fit: contain;     /* preserve the full image inside the box */
+  }
+
+  /* optional: limit visual height on very tall logos */
+  @media (min-width:1200px){
+    .logo{ max-height: 3.2in; } /* limits logo height on large screens (adjust as needed) */
+  }
   </style>
 </head>
 <body>
+	  <!-- put this where your logo should appear -->
+<div class="logo-wrap">
+	<a href="index.html" aria-label="IdylDesign Home">
+  <img src="Atrium.jpg" alt="Atrium" class="logo">
+  </a>
+</div>
   <div class="wrap">
     <header>
-      <div class="logo" aria-hidden="false">
+    <!--  <div class="logo" aria-hidden="false">
         <a href="index.html" aria-label="IdylDesign Home">
           <img src="IdylLogo.JPG" alt="IdylDesign logo" />
         </a>
-      </div>
+      </div>-->
       <div>
         <h1>Interior Design</h1>
         <p class="lead">Practical, cohesive interior design and remodel guidance for homeowners who want beautiful spaces that last.</p>
@@ -152,7 +181,7 @@
     </main>
 
     <footer>
-      <div class="muted"><a href="mailto:idyldesignmarin@gmail.com">idyldesignmarin@gmail.com</a> | (415) 342 6451</div>
+      <div class="muted"><a href="Index.html">Home</a><a> | </a></a><a href="mailto:idyldesignmarin@gmail.com">idyldesignmarin@gmail.com</a> | (415) 342 6451</div>
     </footer>
   </div>
 </body>
