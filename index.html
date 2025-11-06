@@ -61,12 +61,38 @@
             .hero{ height:40vh; }
             .container{ padding:1rem; }
         }
+
+        /* container keeps the logo centered and gives an optional page-like margin */
+        .logo-wrap{
+            max-width: 8.5in;        /* letter width */
+            margin: 1rem auto;       /* center and give breathing room */
+            padding: 0 1rem;         /* optional side padding on small screens */
+        }
+
+        /* responsive logo */
+        .logo{
+            display: block;
+            width: 100%;             /* fill the container up to max-width */
+            max-width: 8.5in;        /* ensure it never grows beyond letter width */
+            height: auto;            /* preserve aspect ratio */
+            object-fit: contain;     /* preserve the full image inside the box */
+        }
+
+        /* optional: limit visual height on very tall logos */
+        @media (min-width:900px){
+            .logo{ max-height: 3.2in; } /* limits logo height on large screens (adjust as needed) */
+        }
     </style>
 </head>
 <body>
 
 <!-- Replace the URL in the style attribute with your banner image -->
-<div class="hero" style="background-image:url('\HomeInter.png');" role="img" aria-label="Interior design banner"></div>
+<!--<div class="hero" style="background-image:url('\HomeInter.png');" role="img" aria-label="Interior design banner"></div>-->
+
+<!-- put this where your logo should appear -->
+<div class="logo-wrap">
+    <img src="IdylLogo.JPG" alt="IdylDesign logo" class="logo">
+</div>
 
 <main class="container">
     <h1>Interior and Exterior Design from Idea to Reality</h1>
